@@ -1,0 +1,22 @@
+{
+  "name": "ng contacts zoe",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Zoe leblanc <zgleblanc@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nss-evening-cohort-4/ng-contacts-ZoeLeBlanc-1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8"
+  }
+}
