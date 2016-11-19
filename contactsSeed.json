@@ -1,0 +1,28 @@
+{
+	"contacts":{
+		"contact1":{
+			"name": "Camille",
+			"relationship": "sister",
+			"email": "camille@gmail.com",
+			"facebook": "facebook.com/camille",
+			"isContacted": true,
+			"dateLastContacted": "November 1, 2016"
+		},
+		"contact2":{
+			"name": "Gilles",
+			"relationship": "father",
+			"email": "gilles@gmail.com",
+			"facebook": "facebook.com/gilles",
+			"isContacted": false,
+			"dateLastContacted": "November 11, 2016"
+		},
+		"contact3":{
+			"name": "Laura",
+			"relationship": "mother",
+			"email": "laura@gmail.com",
+			"facebook": "facebook.com/laura",
+			"isContacted": true,
+			"dateLastContacted": "November 2, 2016"
+		}
+	}
+}
