@@ -1,111 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NG Contacts App</title>
+	<title>Convey: The Contacts App</title>
 	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body ng-app="ContactsApp">
-<!-- Login area -->
-<div>
-	
-</div>
-<!-- Initial view of contacts -->
-<div>
-    <nav class="navbar navbar-default" ng-controller="NavCtrl">
-        <div class="container-fluid">
-        <!-- Brand and toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Contacts App</a>
-            </div>
-            <!-- Nav links -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right" ng-repeat="navItem in navItems">
-                <li><a href="#">{{navItem.name}}</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</div>
-<!-- Add new contact -->
-<div ng-controller="ContactCtrl">
-	<div class="row">
-     <div class="col-xs-6 col-xs-offset-3">
-        <button class="col-xs-6 btn btn-success" ng-click="newContact()">Add New Contact</button>
-        <button class="col-xs-6 btn btn-info" ng-click="allContacts()">List All Contacts</button>
-     </div>   
-    </div>
+<!-- Nav area -->
+    <div ng-include="'./partials/nav.html'"></div>
     <div class="row">
-        <div class="col-xs-offset-2 col-xs-8">
-            <h1>{{title}}</h1>
-            <div ng-show="!showContactView">
-                <h3>New Contact</h3>
-                    <form>
-                        <div class="form-group">
-                            <label>Contact Name</label>
-                            <input type="text" class="form-control" id="add-contact" placeholder="New Contact Name" ng-model="newContact.name">
-                        </div>
-                        <div class="form-group">
-                                <label>Contact Relationship</label>
-                                <input type="text" class="form-control" id="add-contact-relationship" placeholder="Specify relationship" ng-model="newContact.relationship">
-                        </div>
-                         <div class="form-group">
-                                <label>Contact Email</label>
-                                <input type="text" class="form-control" id="add-contact-email" placeholder="Specify email" ng-model="newContact.email">
-                        </div>
-                        <div class="form-group">
-                                <label>Contact Facebook</label>
-                                <input type="text" class="form-control" id="add-contact-facebook" placeholder="Specify facebook" ng-model="newContact.facebook">
-                        </div>
-                    </form>
-            </div>
-            <div ng-show="showContactView">
-            <h3>Contacts</h3>
-                <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default"><i class="fa fa-search"></i></button>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Search for ..." ng-model="searchContacts">
-                            </div>
-                    </div>
-                </div>
-                <h3>Uncontacted Contacts</h3>
-                <div ng-repeat="contact in contacts | filter: {isContacted:false} | filter: searchContacts">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="col-xs-1">
-                                <input type="checkbox" name="" ng-checked="contact.isContacted">
-                             </div>            
-                            <div class="col-xs-3">
-                                {{contact.name}}
-                            </div>
-                            <div class="col-xs-1"><button class="btn btn-info fa fa-envelope"></button>{{contact.email}}</div>
-                             <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Convey: The Contacts App</h1>
+        <div class="col-xs-offset-2 col-xs-8" ng-view></div>
     </div>
-</div>
+
 
  	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/lib/bower_components/angular/angular.min.js"></script>
+    <script src="/lib/bower_components/angular-route/angular-route.min.js"></script>
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/AppConstants.js"></script>
     <script src="/javascripts/AppConfig.js"></script>
+    <script src="/javascripts/factories/ContactFactory.js"></script>
+    <script src="/javascripts/factories/AuthFactory.js"></script>
+    <script src="/javascripts/factories/UserFactory.js"></script>
+    <script src="/javascripts/controllers/AuthCtrl.js"></script>
+    <script src="/javascripts/controllers/NavCtrl.js"></script>
+    <script src="/javascripts/controllers/ContactListCtrl.js"></script>
+    <script src="/javascripts/controllers/ContactNewCtrl.js"></script>
+    <script src="/javascripts/controllers/ContactViewCtrl.js"></script>
+    <script src="/javascripts/controllers/ContactEditCtrl.js"></script>
 </body>
 </html>

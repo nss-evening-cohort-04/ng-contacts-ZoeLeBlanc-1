@@ -1,0 +1,46 @@
+<div class="container col-xs-4 col-xs-offset-4">
+	<div class="row">
+		<button class="btn btn-info col-xs-6" ng-click="setLoginContainer()">Login</button>
+		<button class="btn btn-success col-xs-6" ng-click="setRegisterContainer()">Register</button>
+	</div>
+	<div class="row">
+		<form ng-show="loginContainer">
+			<h3>LOGIN FORM</h3>
+			<div class="form-group">
+				<label>Email Address</label>
+				<input type="email" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="login.email" required autofocus>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="login.password" required>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-success btn-lg col-xs-offset-1 col-xs-10" ng-click="loginUser(login)">Submit Login</a>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-danger btn-lg col-xs-offset-1 col-xs-10 fa fa-google" ng-click="loginGoogleUser()"></a>
+			</div>
+		</form>
+		<form ng-show="registerContainer">
+			<h3>REGISTER FORM</h3>
+			<div class="form-group">
+				<label>Email Address</label>
+				<input type="email" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="register.email" required autofocus>
+			</div>
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="col-xs-offset-1 col-xs-10" placeholder="Username" ng-model="register.username" required>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="register.password" required>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-success btn-md col-xs-offset-1 col-xs-5" ng-click="registerUser(register)">Submit Registration</a>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-danger btn-md col-xs-offset-1 col-xs-5 fa fa-google" ng-click="registerGoogleUser()">Register with Google</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,28 +1,89 @@
 {
 	"contacts":{
-		"contact1":{
-			"name": "Camille",
+		"contact0":{
+			"firstName": "Camille",
+			"lastName": "LeBlanc",
 			"relationship": "sister",
 			"email": "camille@gmail.com",
 			"facebook": "facebook.com/camille",
 			"isContacted": true,
-			"dateLastContacted": "November 1, 2016"
+			"dateLastContacted": "November 1, 2016",
+			"contactIntervalNumber": 7,
+			"contactIntervalUnit": "days",
+			"timesContacted": "",
+			"datesContacted": "",
+			"preferredContactMethod": "",
+			"uid": ""
 		},
-		"contact2":{
-			"name": "Gilles",
+		"contact1":{
+			"firstName": "Gilles",
+			"lastName": "LeBlanc",
 			"relationship": "father",
 			"email": "gilles@gmail.com",
 			"facebook": "facebook.com/gilles",
 			"isContacted": false,
-			"dateLastContacted": "November 11, 2016"
+			"dateLastContacted": "November 11, 2016",
+			"contactIntervalNumber": 5,
+			"contactIntervalUnit": "days",
+			"timesContacted": "",
+			"datesContacted": "",
+			"preferredContactMethod": "",
+			"uid": ""
 		},
-		"contact3":{
-			"name": "Laura",
+		"contact2":{
+			"firstName": "Laura",
+			"lastName": "LeBlanc",
 			"relationship": "mother",
 			"email": "laura@gmail.com",
 			"facebook": "facebook.com/laura",
 			"isContacted": true,
-			"dateLastContacted": "November 2, 2016"
+			"dateLastContacted": "November 2, 2016",
+			"contactIntervalNumber": 12,
+			"contactIntervalUnit": "days",
+			"timesContacted": "",
+			"datesContacted": "",
+			"preferredContactMethod": "",
+			"uid": ""
+		},
+		"contact3":{
+			"firstName": "Mary",
+			"lastName": "Miller",
+			"relationship": "sister",
+			"email": "marymiller@gmail.com",
+			"facebook": "facebook.com/marymiller",
+			"isContacted": true,
+			"dateLastContacted": "November 2, 2016",
+			"contactIntervalNumber": 14,
+			"contactIntervalUnit": "days",
+			"timesContacted": "",
+			"datesContacted": "",
+			"preferredContactMethod": "",
+			"uid": ""
+		},
+		"contact4":{
+			"firstName": "Jesse",
+			"lastName": "Miller",
+			"relationship": "brother",
+			"email": "jessemiller@gmail.com",
+			"facebook": "facebook.com/jessemiller",
+			"isContacted": true,
+			"dateLastContacted": "November 2, 2016",
+			"contactIntervalNumber": 7,
+			"contactIntervalUnit": "days",
+			"timesContacted": "",
+			"datesContacted": "",
+			"preferredContactMethod": "",
+			"uid": ""
+		},
+	},
+	"users":{
+		"user0":{
+			"username": "Zoe",
+			"uid": ""
+		},
+		"user1":{
+			"username": "Dan",
+			"uid": ""
 		}
 	}
 }

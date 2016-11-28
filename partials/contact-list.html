@@ -1,0 +1,39 @@
+<div class="row">
+<h2>Your Contacts</h2>
+    <div class="col-xs-6 col-xs-offset-3">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default"><i class="fa fa-search"></i></button>
+            </span>
+            <input type="text" class="form-control" placeholder="Search for ..." ng-model="searchText">
+        </div>
+    </div>
+</div>
+
+
+<h3>People who you need to contact</h3>
+<div ng-repeat="contact in contacts | filter: {isContacted:false} | filter: searchText">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-1">
+                <input type="checkbox" name="" ng-model="item.isContacted" ng-change="inputChange(contact)">
+            </div>
+            <div class="col-xs-9"><a href="#/contacts/view/{{contact.id}}">{{contact.firstName}} {{contact.lastName}}</a></div>
+            <div class="col-xs-1">{{contact.dateLastContacted}}</div>
+            <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact(contact.id)"></button></div>
+        </div>
+    </div>
+</div>
+<h3>Recently contacted</h3>
+<div ng-repeat="contact in contacts | filter: {isCompleted:true} | filter: searchText">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-1">
+                <input type="checkbox" name="" ng-model="contact.isContacted" ng-change="inputChange(contact)">
+            </div>
+            <div class="col-xs-9"><a href="#/contacts/view/{{contact.id}}">{{contact.firstName}} {{contact.lastName}}</a></div>
+            <div class="col-xs-1">{{contact.dateLastContacted}}</div>
+             <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact(contact.id)"></button></div>
+        </div>
+    </div>
+</div>
